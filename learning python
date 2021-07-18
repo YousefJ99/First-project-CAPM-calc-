@@ -1,14 +1,11 @@
 print("Yousef's CAPM Calculator")
 
+x = float(input('Enter Risk Free Rate: '))/100
+y = float(input('Enter Beta: '))
+z = float(input('Enter Market Return: '))/100
 
-x = input('Enter Risk Free Rate: ')
-y = input('Enter Beta: ')
-z = input('Enter Market Return: ')
-
-
-r = float(x)+(float(y)*(float(z)-float(x)))
-
+r = x+(y*(z-x))
 rp = float(r)*100
 
-print("Expected return in decimal terms is: "),print(r)
-print ("or in percentage terms "),print((rp))
+print("Expected return in decimal terms is "+str(r))
+print ("or in percentage terms "+str(rp)+"%")
